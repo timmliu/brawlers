@@ -1,7 +1,6 @@
 import rotate from './rotate'
 
-const rotateToCenter = ({ array=[], id }) => {
-  const centerIndex = Math.floor(array.length / 2)
+const rotateToCenter = ({ array=[], id, centerIndex }) => {
   const matchIndex = array.findIndex(b => b.id === id)
 
   if (!~matchIndex) return array
