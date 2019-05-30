@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../components/Home/Header'
 import Gallery from '../components/Home/Gallery'
-import Footer from '../components/Home/Footer'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
