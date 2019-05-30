@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './Card.module.css'
 import { Link } from 'react-router-dom'
-import Detail from '../../screens/Detail'
 
 const Card = ({ brawler }) => {
   const image = require(`../../assets/images/${brawler.avatar}`)

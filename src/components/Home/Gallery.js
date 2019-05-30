@@ -4,7 +4,6 @@ import data from '../../data'
 import Card from '../../components/Home/Card'
 import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
-import Dots from './Dots'
 
 const Gallery = () => {
   const [brawlers, setBrawlers] = useState(data.brawlers)
@@ -24,7 +23,14 @@ const Gallery = () => {
           <ChevronRight size={64} className={styles.chevron} />
         </div>
       </div>
-      <Dots brawlers={brawlers} />
+
+      <div className={styles.dotsContainer}>
+        <div className={styles.dotsWrapper}>
+          { brawlers.map(b => {
+            return <div className={styles.dot} key={b.name}></div>
+          })}
+        </div>
+      </div>
     </div>
   )
 }
