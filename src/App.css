@@ -69,6 +69,11 @@
   src: url('./assets/fonts/Rubik-Regular.ttf') format('truetype');
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   font-family: 'Rubik-Regular';
   color: var(--main-text);

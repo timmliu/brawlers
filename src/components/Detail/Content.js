@@ -3,13 +3,13 @@ import styles from './Content.module.css'
 import Breadcrumbs from '../Breadcrumbs'
 import Hero from '../Hero'
 
-const Content = () => {
+const Content = (brawler) => {
   return (
     <div>
       <Breadcrumbs />
       <Hero />
       {/* images */}
-      <p>brawler.description</p>
+      <p>{ brawler.description }</p>
     </div>
   )
 }

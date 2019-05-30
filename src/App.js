@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { Router } from '@reach/router';
+import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
 import Home from './screens/Home';
 import Detail from './screens/Detail';
+import Footer from './components/Footer'
 
-let HomeRoute = () => <Home />
-let DetailRoute = () => <Detail />
-
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  render() {
+    return (
       <Router>
-        <HomeRoute path="/" />
-        <DetailRoute path="detail" />
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/detail/:slug" component={Detail} />
+            <Redirect to="/"/>
+          </Switch>
+          <Footer />
+        </div>
       </Router>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
