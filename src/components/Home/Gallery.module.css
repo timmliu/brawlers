@@ -14,3 +14,10 @@
 .chevron:hover {
   color: var(--quaternary-color);
 }
+
+.carousel {
+  width: 850px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
