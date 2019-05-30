@@ -8,7 +8,7 @@
   cursor: pointer;
   position: relative;
   top: 90px;
-  color: var(--tertiary-color);
+  color: #fff;
 }
 
 .chevron:hover {
