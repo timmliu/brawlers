@@ -3,6 +3,9 @@
   height: 200px;
   text-align: center;
   box-shadow: 0 0 20px black;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .title {

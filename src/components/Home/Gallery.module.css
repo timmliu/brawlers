@@ -1,7 +1,10 @@
 .gallery {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
+  box-shadow: 0 0 10px black;
+  position: relative;
+  z-index: 1;
 }
 
 .chevron {
@@ -17,7 +20,8 @@
 
 .carousel {
   width: 850px;
-  overflow: hidden;
+  margin-bottom: 40px;
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
 }

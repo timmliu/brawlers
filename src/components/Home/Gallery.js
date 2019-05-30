@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styles from './Gallery.module.css'
 import data from '../../data'
 import Card from '../../components/Home/Card'
-import Dots from '../../components/Home/Dots'
 import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
 
@@ -22,7 +21,6 @@ const Gallery = () => {
       <div onClick={ () => setBrawlers(rotate(brawlers, 'right')) }>
         <ChevronRight size={64} className={styles.chevron} />
       </div>
-      <Dots brawlers={data.brawlers} />
     </div>
   )
 }
