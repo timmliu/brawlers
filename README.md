@@ -1,10 +1,16 @@
 # Brawlers
 
-A gallery of Brawl Star characters made w/ React
+A gallery of Brawl Star characters made w/ React.
 
+### Setup
 ```shell
-yarn start
+$ yarn
+$ yarn start
 ```
+
+### Deploy
+- Project is set up to deploy whenever a commit is merged to master
+- Deploys to https://react-brawlers.netlify.com/
 
 ---
 
