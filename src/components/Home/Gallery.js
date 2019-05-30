@@ -4,6 +4,7 @@ import data from '../../data'
 import Card from '../../components/Home/Card'
 import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
+import rotateToCenter from '../../utils/rotateToCenter'
 
 const Gallery = () => {
   const [brawlers, setBrawlers] = useState(data.brawlers)
@@ -16,7 +17,7 @@ const Gallery = () => {
         </div>
         <div className={styles.carousel}>
           { brawlers.map(brawler => {
-            return <Card brawler={brawler} key={brawler.name} />
+            return <Card brawler={brawler} key={brawler.id} />
           }) }
         </div>
         <div onClick={ () => setBrawlers(rotate(brawlers, 'right')) }>
@@ -26,9 +27,7 @@ const Gallery = () => {
 
       <div className={styles.dotsContainer}>
         <div className={styles.dotsWrapper}>
-          { brawlers.map(b => {
-            return <div className={styles.dot} key={b.name}></div>
-          })}
+          { data.brawlers.map(b => (<div className={styles.dot} key={b.id} onClick={ () => setBrawlers(rotateToCenter({ array: brawlers, id: b.id })) }></div>) )}
         </div>
       </div>
     </div>
