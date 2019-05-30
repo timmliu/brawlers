@@ -5,6 +5,7 @@ import Card from '../../components/Home/Card'
 import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
 import rotateToCenter from '../../utils/rotateToCenter'
+import nextIndex from '../../utils/nextIndex'
 
 const Gallery = () => {
   const centerIndex = Math.floor(data.brawlers.length / 2)
@@ -21,6 +22,11 @@ const Gallery = () => {
     })
   }
 
+  const handleArrowClick = (brawlers, direction) => {
+    setBrawlers(rotate(brawlers, direction))
+    setStaticBrawlers(activate(staticBrawlers, nextIndex(staticBrawlers, staticBrawlers.findIndex(b => b.active), direction)))
+  }
+
   const handleDotsClick = (array, id) => {
     const indexToActivate = array.findIndex(v => v.id === id)
     setBrawlers(rotateToCenter({ array, id, centerIndex }))
@@ -30,7 +36,7 @@ const Gallery = () => {
   return (
     <div className={styles.container}>
       <div className={styles.gallery}>
-        <div onClick={ () => setBrawlers(rotate(brawlers, 'left')) }>
+        <div onClick={ () => handleArrowClick(brawlers, 'left') }>
           <ChevronLeft size={64} className={styles.chevron} />
         </div>
         <div className={styles.carousel}>
@@ -38,7 +44,7 @@ const Gallery = () => {
             return <Card brawler={brawler} key={brawler.id} />
           }) }
         </div>
-        <div onClick={ () => setBrawlers(rotate(brawlers, 'right')) }>
+        <div onClick={ () => handleArrowClick(brawlers, 'right') }>
           <ChevronRight size={64} className={styles.chevron} />
         </div>
       </div>
