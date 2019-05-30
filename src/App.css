@@ -1,8 +1,9 @@
 :root {
   --primary-color: #cd4545;
-  --secondary-color: #f16821;
+  --secondary-color: #333333;
   --tertiary-color: #f3a333;
   --quaternary-color: #fffe9a;
+  --dark-mine-shaft: #222222;
   --main-text: #ffffff;
 }
 

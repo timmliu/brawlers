@@ -2,10 +2,10 @@
   background-color: var(--primary-color);
   height: 200px;
   text-align: center;
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px var(--dark-mine-shaft);
   position: relative;
   z-index: 2;
-  pointer-events: none;
+  user-select: none;
 }
 
 .title {
