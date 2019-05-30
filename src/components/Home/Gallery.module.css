@@ -3,3 +3,14 @@
   display: flex;
   justify-content: center;
 }
+
+.chevron {
+  cursor: pointer;
+  position: relative;
+  top: 90px;
+  color: var(--tertiary-color);
+}
+
+.chevron:hover {
+  color: var(--quaternary-color);
+}
