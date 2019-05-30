@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.dotsWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.dot:hover {
+  background-color: var(--tertiary-color);
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}

@@ -8,7 +8,7 @@ const Card = ({ brawler }) => {
   const url = `detail/${brawler.slug}`
   return (
     <div className={styles.card}>
-      <Link to={url} component={Detail}><img src={image} alt={brawler.name} className={styles.avatar} /></Link>
+      <Link to={url}><img src={image} alt={brawler.name} className={styles.avatar} /></Link>
       <Link to={url}><div className={styles.name}>{brawler.name}</div></Link>
       <div>{brawler.quote}</div>
     </div>

@@ -4,23 +4,27 @@ import data from '../../data'
 import Card from '../../components/Home/Card'
 import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
+import Dots from './Dots'
 
 const Gallery = () => {
   const [brawlers, setBrawlers] = useState(data.brawlers)
 
   return (
-    <div className={styles.gallery}>
-      <div onClick={ () => setBrawlers(rotate(brawlers, 'left')) }>
-        <ChevronLeft size={64} className={styles.chevron} />
+    <div className={styles.container}>
+      <div className={styles.gallery}>
+        <div onClick={ () => setBrawlers(rotate(brawlers, 'left')) }>
+          <ChevronLeft size={64} className={styles.chevron} />
+        </div>
+        <div className={styles.carousel}>
+          { brawlers.map(brawler => {
+            return <Card brawler={brawler} key={brawler.name} />
+          }) }
+        </div>
+        <div onClick={ () => setBrawlers(rotate(brawlers, 'right')) }>
+          <ChevronRight size={64} className={styles.chevron} />
+        </div>
       </div>
-      <div className={styles.carousel}>
-        { brawlers.map(brawler => {
-          return <Card brawler={brawler} key={brawler.name} />
-        }) }
-      </div>
-      <div onClick={ () => setBrawlers(rotate(brawlers, 'right')) }>
-        <ChevronRight size={64} className={styles.chevron} />
-      </div>
+      <Dots brawlers={brawlers} />
     </div>
   )
 }
