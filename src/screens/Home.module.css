@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--primary-color);
+  height: 200px;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  padding-top: 55px;
+}
