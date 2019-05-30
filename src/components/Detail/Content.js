@@ -5,8 +5,8 @@ import Hero from '../Hero'
 
 const Content = (brawler) => {
   return (
-    <div>
-      <Breadcrumbs />
+    <div className={styles.content}>
+      <Breadcrumbs name={ brawler.name } />
       <Hero />
       {/* images */}
       <p>{ brawler.description }</p>

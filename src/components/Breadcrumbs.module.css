@@ -1,0 +1,11 @@
+.link {
+  font-family: 'Rubik-Bold';
+}
+
+.link:hover {
+  color: var(--quaternary-color);
+}
+
+.nolink {
+  font-family: 'Rubik-Light';
+}

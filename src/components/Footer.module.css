@@ -1,6 +1,7 @@
 .footer {
   background-color: var(--primary-color);
   text-align: center;
-  padding-top: 70px;
+  padding-top: 60px;
   user-select: none;
+  height: 75px;
 }

@@ -20,9 +20,16 @@
 .name {
   font-family: 'Rubik-Bold';
   font-size: 1.2rem;
+  margin-top: 10px;
 }
 
 .name:hover {
   cursor: pointer;
   color: var(--quaternary-color);
+}
+
+@media screen and (max-width: 320px) {
+  .avatar {
+    width: 130px;
+  }
 }
