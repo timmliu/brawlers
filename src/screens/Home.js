@@ -1,13 +1,12 @@
 import React from 'react'
-import styles from './Home.module.css'
+import Header from '../components/Home/Header'
+import Gallery from '../components/Home/Gallery'
 
 const Home = () => {
   return (
     <div>
-      <header className={styles.header}>
-        <h1 className={styles.title}>Brawl Stars</h1>
-        <h3>A gallery of favorite brawlers</h3>
-      </header>
+      <Header />
+      <Gallery />
     </div>
   )
 }

@@ -1,0 +1,28 @@
+.card {
+  width: 240px;
+  margin: 0 20px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background-color: var(--tertiary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.avatar:hover {
+  box-shadow: 0 0 15px 1px var(--quaternary-color);
+  cursor: pointer;
+}
+
+.name {
+  font-family: 'Rubik-Bold';
+  font-size: 1.2rem;
+}
+
+.name:hover {
+  cursor: pointer;
+  color: var(--quaternary-color);
+}
