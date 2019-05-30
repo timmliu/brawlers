@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from '../Icons'
 import rotate from '../../utils/rotate'
 import rotateToCenter from '../../utils/rotateToCenter'
 import nextIndex from '../../utils/nextIndex'
+import activate from '../../utils/activate'
 
 const Gallery = () => {
   const centerIndex = Math.floor(data.brawlers.length / 2)
@@ -15,15 +16,8 @@ const Gallery = () => {
   const [staticBrawlers, setStaticBrawlers] = useState(data.brawlers.slice(0))
   const [brawlers, setBrawlers] = useState(data.brawlers)
 
-  const activate = (array, index) => {
-    return array.map((v, i) => {
-      v.active = index === i
-      return v
-    })
-  }
-
-  const handleArrowClick = (brawlers, direction) => {
-    setBrawlers(rotate(brawlers, direction))
+  const handleArrowClick = (array, direction) => {
+    setBrawlers(rotate(array, direction))
     setStaticBrawlers(activate(staticBrawlers, nextIndex(staticBrawlers, staticBrawlers.findIndex(b => b.active), direction)))
   }
 
@@ -51,7 +45,7 @@ const Gallery = () => {
 
       <div className={styles.dotsContainer}>
         <div className={styles.dotsWrapper}>
-          { staticBrawlers.map(b => (<div className={ b.active ? styles.dotActive : styles.dot } key={b.id} onClick={ () => handleDotsClick(brawlers, b.id) }></div>) )}
+          { staticBrawlers.map(b => (<div className={ b.active ? styles.dotActive : styles.dot } key={b.id} onClick={ () => handleDotsClick(staticBrawlers, b.id) }></div>) )}
         </div>
       </div>
     </div>
